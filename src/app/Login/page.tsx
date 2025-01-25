@@ -28,8 +28,8 @@ function Page(){
       password
     }
     try{
-    const response = await axios.post("https:localhost:27017/auth/login" , data)
-    if (response.status === 200) {
+    const response = await axios.post("https://hack-back-xjx3.vercel.app/auth/login" , data)
+    if (response.status === 201) {
       route.push("/home")
       toast({
         title: "Login Successfully  Successfully",
