@@ -1,94 +1,100 @@
-"use client";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import Link from "next/link"
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react"
 
-function Footer() {
+const  Footer = () =>{
   return (
-    <div className="flex justify-center">
-      <div className="w-[95%]">
-        <h5>Blog</h5>
-        <div className="bg-gray-900 text-white py-8">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-8">
-              <div className="mb-6 md:mb-0 text-center md:text-left">
-                <h2 className="text-lg font-semibold">About the Blog</h2>
-                <p className="text-sm mt-2 text-gray-400">
-                  Discover insightful articles on various topics. We are
-                  dedicated to providing quality content for our readers.
-                </p>
-              </div>
-
-              <div className="mb-6 md:mb-0 text-center md:text-left">
-                <h2 className="text-lg font-semibold">Categories</h2>
-                <ul className="mt-2 text-sm text-gray-400">
-                  <li>
-                    <a href="#" className="hover:text-white">
-                      Technology
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white">
-                      Health & Wellness
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white">
-                      Travel
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white">
-                      Lifestyle
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white">
-                      Sports
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="text-center md:text-left">
-                <h2 className="text-lg font-semibold">Contact Us</h2>
-                <ul className="mt-2 text-sm text-gray-400">
-                  <li>Email: ABC-blog.com</li>
-                  <li>Phone: +123 456 7890</li>
-                  <li>Address: 123 Karachi ,Pakistan</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="flex justify-center space-x-6 mt-4 mb-8">
-              <Link href="#" className="hover:text-blue-400">
-                <span>Facebook</span>
-                <Facebook />
-              </Link>
-              <Link href="#" className="hover:text-blue-500">
-                <span>Twitter</span>
-                <Twitter />
-              </Link>
-              <Link href="#" className="hover:text-red-500">
-                <span>Instagram</span>
-                <Instagram />
-              </Link>
-              <Link href="#" className="hover:text-blue-600">
-                <span>LinkedIn</span>
-                <Linkedin />
-              </Link>
-            </div>
-
-            <div className="border-t border-gray-700 pt-4 text-center">
-              <p className="text-sm text-gray-500">
-                &copy; 2024 Your Blog. All rights reserved.
-              </p>
+    <footer className="bg-green-800 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Saylani Microfinance</h2>
+            <p className="text-green-200">Empowering lives through financial support and guidance.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/" className="hover:text-green-300 transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-green-300 transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/loan-categories" className="hover:text-green-300 transition-colors">
+                  Loan Categories
+                </Link>
+              </li>
+              <li>
+                <Link href="/apply" className="hover:text-green-300 transition-colors">
+                  Apply for Loan
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-green-300 transition-colors">
+                  About Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center">
+                <Phone className="w-5 h-5 mr-2" />
+                <span>+92 320 788 2400</span>
+              </li>
+              <li className="flex items-center">
+                <Mail className="w-5 h-5 mr-2" />
+                <a href="mailto:info@saylanimicrofinance.com" className="hover:text-green-300 transition-colors">
+                  info@saylanimicrofinance.com
+                </a>
+              </li>
+              <li className="flex items-center">
+                <MapPin className="w-5 h-5 mr-2" />
+                <span>Bahadurabad, Karachi, Pakistan</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-300 transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-300 transition-colors"
+              >
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-300 transition-colors"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
             </div>
           </div>
         </div>
+        <div className="mt-8 pt-8 border-t border-green-700 text-center">
+          <p className="text-green-200">&copy; {new Date().getFullYear()} Saylani Microfinance. All rights reserved.</p>
+        </div>
       </div>
-    </div>
-  );
+    </footer>
+  )
 }
 
 export default Footer;

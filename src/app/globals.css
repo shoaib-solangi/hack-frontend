@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #0f0d24;
   
 
-}
+} */
 
-@layer base {
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -62,8 +62,8 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-}
+  } */
+
 
 /* @layer base {
   * {
@@ -74,9 +74,9 @@ body {
     @apply bg-background text-foreground;
   } */
  
-kk{
+/* kk{
   background-color: #2c73fd;
-}
+} */
 /* @layer base {
   * {
     @apply border-border;
@@ -90,4 +90,3 @@ kk{
   } */
   
 
-/* } */

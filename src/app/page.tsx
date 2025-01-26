@@ -60,19 +60,45 @@
 
 // export default Page;
 
-
-"use client"
-import Link from 'next/link'
-import React from 'react'
-
+"use client";
+import Link from "next/link";
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Categ1 from "./components/Categ1";
+import Categ2 from "./components/Categ2";
+import Categ3 from "./components/Categ3";
+import Categ4 from "./components/Categ4";
+import { LoanCalculator } from "./components/LoanCalculator";
+import Footer from "./components/Footer";
 
 function page() {
   return (
+    <>
     <div>
-      <Link href="/Login">Login</Link>
-      
-    </div>
-  )
+      {/* <Link href="/Login">Login</Link> */}
+      <Header />
+      <Hero />
+      <Services />
+      <div className="my-5">
+        <h3 className="font-bold text-4xl text-center ">Loan Categories</h3>
+      </div>
+      <div className="flex flex-col gap-3">
+        <Categ1 />
+        <Categ2 />
+        <Categ3 />
+        <Categ4 />
+        <LoanCalculator />
+
+      </div>
+
+
+      </div>
+      <Footer />
+    </>
+    
+  );
 }
 
-export default page
+export default page;

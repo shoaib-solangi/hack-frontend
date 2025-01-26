@@ -8,23 +8,23 @@ import React, { useState } from "react";
 
 export default function Page() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [Cnic, setCnic] = useState("");
   const [name, setName] = useState("");
 
 
  
   const { toast } = useToast()
 
-  const signup = async (email: string, Password: string , name : string ) => {
+  const signup = async (email: string, Cnic: String , name : string ) => {
     
     try {
-      console.log(email, Password, name);
+      console.log(email, Cnic, name);
       const data = {
         name , 
         email , 
-        Password,
+        Cnic,
       }
-      const response = await axios.post("http://localhost:4000/auth/signup" , data);
+      const response = await axios.post("http://localhost:4000/users/signup" , data);
       if (response.status === 201) {
         console.log("Success:", response.data);
         toast({
@@ -93,19 +93,21 @@ export default function Page() {
               />
             </div>
             <div>
-              <label className="font-medium">Password</label>
+              <label className="font-medium">Cnic</label>
               <input
                 onChange={(e) => {
-                  setPassword(e.target.value);
+                  setCnic(e.target.value);
                 }}
-                type="password"
+              type="text"
+              
+              
                 required
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
             
             <button onClick={()=>{
-                signup(email,password , name)
+                signup(email, Cnic , name)
             }} className="w-full mt-4 px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
               Create account
             </button>
